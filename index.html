@@ -1,76 +1,75 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
-
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap"
       rel="stylesheet"
     />
-
-    <link rel="stylesheet" href="./css/reset.css" />
-
-    <link rel="stylesheet" href="./css/style.css" />
-
-    <link rel="stylesheet" href="./css/responsive.css" />
-
-    <title>Super Mario Bros - O Filme</title>
+    <title>Mario Bros</title>
   </head>
+
   <body>
-    <div class="fundo-video">
+    <div class="bg-video">
       <video class="video" autoplay loop muted>
         <source src="./assets/video-mario.mp4" type="video/mp4" />
       </video>
     </div>
-
-    <header class="cabecalho">
-      <a href="">
-        <img class="logo" src="./assets/logo-chapeu-mario.png" alt="" />
+    <header class="header">
+      <a href="/">
+        <img
+          class="logo"
+          src="./assets/logo-chapeu-mario.png"
+          alt="logo do chapeu do mario"
+        />
       </a>
       <nav>
         <ul class="menu">
-          <li>
-            <a href="#">Home</a>
-          </li>
-          <li>
-            <a href="#">Detalhes</a>
-          </li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Detalhes</a></li>
         </ul>
       </nav>
     </header>
 
     <main class="container">
       <div class="informacoes">
-        <img class="imagem-titulo" src="./assets/titulo.png" alt="" />
-
-        <p class="descricao">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi culpa
-          numquam natus a exercitationem nulla dolore eligendi atque, vel
-          recusandae dignissimos nisi dolor rerum libero non. Architecto ut
-          praesentium reprehenderit.
+        <img
+          class="titulo"
+          src="./assets/titulo.png"
+          alt="titulo do mario bros"
+        />
+        <p class="texto">
+          Mario é um encanador junto com seu irmão Luigi. Um dia, eles vão parar
+          no reino dos cogumelos, governado pela Princesa Peach, mas ameaçado
+          pelo rei dos Koopas, que faz de tudo para conseguir reinar em todos os
+          lugares.
         </p>
-
-        <button class="botao-trailer">Veja o trailer</button>
+        <button class="btn-trailer">Veja o trailer</button>
       </div>
-      <img class="mario" src="./assets/super-mario-chars.png" alt="" />
+      <img
+        class="mario"
+        src="./assets/super-mario-chars.png"
+        alt="imagem do mario"
+      />
 
       <div class="modal">
         <div class="conteudo-modal">
-          <span class="fechar-modal"></span>
+          <span class="fechar-modal">X</span>
+
           <iframe
-            id="video"
             width="560"
             height="315"
             src="https://www.youtube.com/embed/Cb4WV4aXBpk"
-            title="trailer oficial"
+            title="Trailer oficial"
             frameborder="1"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
@@ -78,5 +77,7 @@
         </div>
       </div>
     </main>
+
+    <script type="text/javascript" src="./js/modal.js"></script>
   </body>
 </html>

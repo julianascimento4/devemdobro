@@ -3,7 +3,7 @@
     background-color: #f44336;
   }
 
-  .fundo-video {
+  .bg-video {
     display: none;
   }
 
@@ -24,41 +24,38 @@
     flex-direction: column;
   }
 
-  .container .descricao {
-    color: #fff;
+  .container .texto {
     text-align: center;
+    color: #fff;
   }
 
-  .container .botao-trailer {
-    background-color: #263238;
+  .container .btn-trailer {
+    background-color: #313339;
+  }
+
+  .header .menu li a:hover {
+    background-color: #313339;
   }
 }
 
 @media (max-width: 500px) {
-  .cabecalho {
+  .header {
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
   }
 
-  .container .imagem-titulo {
+  .container .titulo {
     max-width: 75%;
   }
 
-  .modal .fechar {
+  .modal .fechar-modal {
     width: 30px;
     line-height: 30px;
   }
 
-  .modal #video {
-    width: 30px;
+  .modal iframe {
+    width: 300px;
     height: 169px;
-  }
-}
-
-@media (max-width: 376px) {
-  .modal #video {
-    width: 250px;
-    height: 140px;
   }
 }

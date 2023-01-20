@@ -1,8 +1,12 @@
-body {
-  font-family: "Poppins";
+html {
+  font-size: 62.5%;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+
+  color: #fff;
 }
 
-.cabecalho {
+.header {
   display: flex;
   justify-content: space-between;
   padding: 30px;
@@ -10,82 +14,83 @@ body {
   margin: 0 auto;
 }
 
-.cabecalho .logo {
-  width: 65px;
+.header .logo {
+  width: 3.5rem;
 }
 
-.cabecalho .menu {
+.header .menu {
   display: flex;
   align-items: center;
   height: 100%;
 }
 
-.cabecalho nav li a {
-  font-weight: bold;
-  color: #fff;
-  font-size: 25px;
-  margin: 0 10px;
+.header .menu li a {
   padding: 10px 20px;
-  border-radius: 50px;
-  transition: 0.7s;
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: bold;
+  border-radius: 15px;
+  transition: 0.3s ease-in-out;
 }
 
-.cabecalho nav li a:hover {
-  background-color: #d5011d;
+.header .menu li a:hover {
+  background-color: #ff0021;
 }
 
 .container {
-  max-width: 1440px;
-  margin: 0 auto;
   display: flex;
   align-items: center;
-  height: calc(100vh - 132px); /*tamanho total - cabeçalho*/
+  height: calc(100vh - 123px);
+  max-width: 1440px;
+  margin: 0 auto;
   padding: 0 30px 30px;
 }
 
-.container .imagem-titulo {
-  max-width: 500px;
+.container .titulo {
+  width: 500px;
 }
 
-.container .descricao {
+.container .texto {
   color: #a8adb7;
-  width: 85%;
   font-size: 18px;
+  text-align: start;
   margin: 30px 0;
+  width: 85%;
 }
 
-.container .botao-trailer {
+.container .btn-trailer {
+  padding: 15px;
   background-color: #ff0021;
   color: #fff;
-  padding: 15px;
-  font-size: 18px;
   font-weight: bold;
-  cursor: pointer;
-  border: none;
   text-transform: uppercase;
-  transition: 0.2s all ease-in-out;
+  border: none;
+  cursor: pointer;
+  transition: 0.5s all ease-in-out;
+  font-size: 18px;
 }
 
-.container .botao-trailer:hover {
+.container .btn-trailer:hover {
   transform: scale(1.1);
 }
 
-.fundo-video {
-  position: absolute;
-  z-index: -1;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
+.bg-video {
   display: flex;
   justify-content: center;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: -100;
+  overflow: hidden;
 }
 
-.fundo-video .video {
+.bg-video .video {
   height: 100vh;
 }
 
-.fundo-video::after {
+.bg-video::after {
   content: "";
+  background-color: #d5011d;
   height: 100vh;
   width: 100vw;
   position: absolute;
@@ -94,28 +99,27 @@ body {
   background: linear-gradient(
     90deg,
     rgba(0, 0, 0, 1) 0%,
-    rgba(0, 0, 0, 0.9) 50%,
+    rgba(0, 0, 0, 0.8) 50%,
     rgba(0, 0, 0, 1) 100%
   );
 }
 
 .modal {
   position: fixed;
-  width: 100vh;
+  width: 100vw;
   height: 100vh;
   top: 0;
   left: 0;
-  background-color: rgba(52, 52, 50, 0.749);
-  opacity: 0;
+  background-color: rgba(52, 52, 50, 0.7);
   visibility: hidden;
 }
 
 .conteudo-modal {
   display: flex;
-  justify-content: center;
   align-items: center;
-  flex-direction: column;
+  justify-content: center;
   height: 100vh;
+  flex-direction: column;
   border-radius: 5px;
   gap: 15px;
 }
@@ -132,12 +136,11 @@ body {
 }
 
 .modal iframe {
-  border-width: 0;
+  border: 0;
   width: 640px;
   height: 360px;
 }
 
 .modal.aberto {
-  opacity: 1;
   visibility: visible;
 }
